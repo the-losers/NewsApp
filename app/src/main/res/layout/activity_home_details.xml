@@ -61,26 +61,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
-            <TextView
-                android:id="@+id/dot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:text=" . "
 
-                app:layout_constraintStart_toEndOf="@+id/author_tv"
-                app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
-            <TextView
-                android:id="@+id/time_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:text=" 1 min ago"
-
-                app:layout_constraintStart_toEndOf="@+id/dot"
-                app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
             <ImageView
                 android:id="@+id/source_imv"
@@ -89,7 +71,7 @@
                 android:layout_marginTop="@dimen/dimen8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/time_tv" />
+                app:layout_constraintTop_toBottomOf="@+id/author_tv" />
 
 
             <TextView

@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.losers.news.R
 import com.losers.news.data.network.Article
 
+
 class HomeAdapter(private val articleList: MutableList<Article>) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
 
@@ -56,7 +57,6 @@ class HomeAdapter(private val articleList: MutableList<Article>) : RecyclerView.
         private var rootView: CardView
         private var titleTv: TextView
         private var authorTv: TextView
-        private var timeTv: TextView
         private var sourceTv: TextView
         private var sourceImag: ImageView
 
@@ -66,7 +66,6 @@ class HomeAdapter(private val articleList: MutableList<Article>) : RecyclerView.
             sourceTv = view.findViewById(R.id.source_tv)
             titleTv = view.findViewById(R.id.title_tv)
             authorTv = view.findViewById(R.id.author_tv)
-            timeTv = view.findViewById(R.id.time)
             sourceImag = view.findViewById(R.id.imageView)
 
 
@@ -80,6 +79,8 @@ class HomeAdapter(private val articleList: MutableList<Article>) : RecyclerView.
             rootView.setOnClickListener {
                 onItemClickListener?.onItemClick(data)
             }
+
+
             Glide.with(context)
                     .load(data.urlToImage)
                     .asBitmap()

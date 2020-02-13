@@ -3,11 +3,9 @@ package com.losers.news.ui.homeDetails.view
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
-import com.google.gson.Gson
 import com.losers.news.R
 import com.losers.news.data.network.Article
 import com.losers.news.ui.base.view.BaseActivity
@@ -63,11 +61,10 @@ class HomeDetailsActivity : BaseActivity(), HomeDetailsMVPView {
         init()
     }
 
-    private fun init(){
+    private fun init() {
         title_tv.text = article?.title
         description_tv.text = article?.description
         author_tv.text = article?.author
-
         Glide.with(applicationContext)
                 .load(article?.urlToImage)
                 .asBitmap()
